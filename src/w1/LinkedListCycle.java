@@ -6,12 +6,14 @@ import java.util.Set;
 /**
  * Description: https://leetcode.com/problems/linked-list-cycle
  * Difficulty: Easy
- * Time complexity: O(n)
- * Space complexity: O(1)
  */
 public class LinkedListCycle {
 
-    public boolean hasCycle(ListNode head) {
+    /**
+     * Time complexity: O(n)
+     * Space complexity: O(1)
+     */
+    public boolean hasCycleViaTwoPointers(ListNode head) {
         ListNode slow = head;
         ListNode fast = head;
 
@@ -25,7 +27,11 @@ public class LinkedListCycle {
         return false;
     }
 
-    public boolean hasCycleWithExcessiveMemoryUsage(ListNode head) {
+    /**
+     * Time complexity: O(n)
+     * Space complexity: O(n)
+     */
+    public boolean hasCycleWithMemoization(ListNode head) {
         Set<ListNode> seen = new HashSet<>();
 
         while (head != null) {
