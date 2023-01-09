@@ -7,7 +7,7 @@ import java.util.Map;
  * Description: https://leetcode.com/problems/longest-palindrome
  * Difficulty: Easy
  * Time complexity: O(n)
- * Space complexity: O(n)
+ * Space complexity: O(1)
  */
 public class LongestPalindrome {
 

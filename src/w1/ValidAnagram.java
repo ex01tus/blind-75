@@ -7,7 +7,7 @@ import java.util.Map;
  * Description: https://leetcode.com/problems/valid-anagram
  * Difficulty: Easy
  * Time complexity: O(m + n)
- * Space complexity: O(m + n)
+ * Space complexity: O(1)
  */
 public class ValidAnagram {
 

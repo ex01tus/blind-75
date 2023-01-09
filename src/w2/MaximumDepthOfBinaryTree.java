@@ -9,17 +9,13 @@ package w2;
 public class MaximumDepthOfBinaryTree {
 
     public int maxDepth(TreeNode root) {
-        return depth(root, 0);
+        return depth(root);
     }
 
-    private int depth(TreeNode root, int depth) {
-        if (root == null) {
-            return depth;
-        }
+    private int depth(TreeNode root) {
+        if (root == null) return 0;
 
-        depth++;
-
-        return Math.max(depth(root.left, depth), depth(root.right, depth));
+        return Math.max(depth(root.left), depth(root.right)) + 1;
     }
 
     private static class TreeNode {
