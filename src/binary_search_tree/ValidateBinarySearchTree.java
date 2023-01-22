@@ -4,7 +4,7 @@ package binary_search_tree;
  * Description: https://leetcode.com/problems/validate-binary-search-tree
  * Difficulty: Medium
  * Time complexity: O(n)
- * Space complexity: O(n)
+ * Space complexity: O(h)
  */
 public class ValidateBinarySearchTree {
 

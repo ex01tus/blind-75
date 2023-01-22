@@ -13,19 +13,19 @@ public class ClimbingStairs {
      * Time complexity: O(n)
      * Space complexity: O(n)
      */
-    public int climbStairsWithMemoization(int n) {
-        Map<Integer, Integer> memo = new HashMap<>();
-        memo.put(1, 1);
-        memo.put(2, 2);
+    public int climbStairsViaDP(int n) {
+        Map<Integer, Integer> dp = new HashMap<>();
+        dp.put(1, 1);
+        dp.put(2, 2);
 
-        return count(n, memo);
+        return count(n, dp);
     }
 
-    private int count(int n, Map<Integer, Integer> memo) {
-        if (memo.containsKey(n)) return memo.get(n);
+    private int count(int n, Map<Integer, Integer> dp) {
+        if (dp.containsKey(n)) return dp.get(n);
 
-        int count = count(n - 1, memo) + count(n - 2, memo);
-        memo.put(n, count);
+        int count = count(n - 1, dp) + count(n - 2, dp);
+        dp.put(n, count);
 
         return count;
     }

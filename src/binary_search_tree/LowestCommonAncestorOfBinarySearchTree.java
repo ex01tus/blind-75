@@ -3,8 +3,8 @@ package binary_search_tree;
 /**
  * Description: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree
  * Difficulty: Medium
- * Time complexity: O(log n)
- * Space complexity: O(log n)
+ * Time complexity: O(h)
+ * Space complexity: O(h)
  */
 public class LowestCommonAncestorOfBinarySearchTree {
 

@@ -14,8 +14,8 @@ public class CoinChange {
     public int coinChange(int[] coins, int amount) {
         if (amount < 1) return 0;
 
-        Map<Integer, Integer> memo = new HashMap<>();
-        memo.put(0, 0);
+        Map<Integer, Integer> dp = new HashMap<>();
+        dp.put(0, 0);
 
         for (int currentAmount = 1; currentAmount <= amount; currentAmount++) {
             int count = Integer.MAX_VALUE;
@@ -23,16 +23,16 @@ public class CoinChange {
             for (int coin : coins) {
                 if (currentAmount - coin < 0) continue;
 
-                if (memo.get(currentAmount - coin) != null) {
-                    count = Math.min(memo.get(currentAmount - coin) + 1, count);
+                if (dp.get(currentAmount - coin) != null) {
+                    count = Math.min(dp.get(currentAmount - coin) + 1, count);
                 }
             }
 
             if (count != Integer.MAX_VALUE) {
-                memo.put(currentAmount, count);
+                dp.put(currentAmount, count);
             }
         }
 
-        return memo.getOrDefault(amount, -1);
+        return dp.getOrDefault(amount, -1);
     }
 }
