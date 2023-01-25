@@ -31,7 +31,7 @@ public class LinkedListCycle {
      * Time complexity: O(n)
      * Space complexity: O(n)
      */
-    public boolean hasCycleWithMemoization(ListNode head) {
+    public boolean hasCycleViaMemoization(ListNode head) {
         Set<ListNode> seen = new HashSet<>();
 
         while (head != null) {
