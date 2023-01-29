@@ -4,7 +4,7 @@ package binary;
  * Description: https://leetcode.com/problems/add-binary
  * Difficulty: Easy
  * Time complexity: O(n)
- * Space complexity: O(1)
+ * Space complexity: O(n)
  */
 public class AddBinary {
 

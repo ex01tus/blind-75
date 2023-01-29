@@ -6,8 +6,8 @@ import java.util.List;
 /**
  * Description: https://leetcode.com/problems/permutations
  * Difficulty: Medium
- * Time complexity: O(n * n!)
- * Space complexity: O(n)
+ * Time complexity: O(n!)
+ * Space complexity: O(n!)
  */
 public class Permutations {
 

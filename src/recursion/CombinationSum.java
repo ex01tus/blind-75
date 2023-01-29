@@ -6,8 +6,8 @@ import java.util.List;
 /**
  * Description: https://leetcode.com/problems/combination-sum
  * Difficulty: Medium
- * Time complexity: O(n * n!)
- * Space complexity: O(n)
+ * Time complexity: O(2^n)
+ * Space complexity: O(2^n)
  */
 public class CombinationSum {
 

@@ -7,7 +7,7 @@ import java.util.List;
  * Description: https://leetcode.com/problems/generate-parentheses
  * Difficulty: Medium
  * Time complexity: O(2^2n)
- * Space complexity: O(n)
+ * Space complexity: O(2^2n)
  */
 public class GenerateParentheses {
 
