@@ -23,19 +23,19 @@ public class KClosestPointsToOrigin {
      * Time complexity: O(nlog k)
      * Space complexity: O(k)
      */
-    public int[][] kClosestViaMinHeap(int[][] points, int k) {
-        Queue<int[]> minHeap = new PriorityQueue<>((p1, p2) -> Integer.compare(distance(p2), distance(p1)));
+    public int[][] kClosestViaMaxHeap(int[][] points, int k) {
+        Queue<int[]> maxHeap = new PriorityQueue<>((p1, p2) -> Integer.compare(distance(p2), distance(p1)));
 
         for (int[] point : points) {
-            minHeap.offer(point);
-            if (minHeap.size() > k) {
-                minHeap.poll();
+            maxHeap.offer(point);
+            if (maxHeap.size() > k) {
+                maxHeap.poll();
             }
         }
 
         int[][] result = new int[k][2];
         for (int i = 0; i < k; i++) {
-            result[i] = minHeap.poll();
+            result[i] = maxHeap.poll();
         }
 
         return result;

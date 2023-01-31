@@ -9,7 +9,7 @@ package string;
 public class LongestPalindromicString {
 
     public String longestPalindrome(String s) {
-        int[][] dp = new int[s.length()][s.length()];
+        boolean[][] dp = new boolean[s.length()][s.length()];
 
         int maxLength = 0;
         int from = 0;
@@ -23,8 +23,8 @@ public class LongestPalindromicString {
                 int currentLength = right - left + 1;
 
                 if (currentLength <= 2 // "a" and "aa" are always palindromes
-                        || dp[left + 1][right - 1] == 1) { // if "cdc" was a palindrome, "a + cdc + a" is also a palindrome
-                    dp[left][right] = 1;
+                        || dp[left + 1][right - 1]) { // if "cdc" was a palindrome, "a + cdc + a" is also a palindrome
+                    dp[left][right] = true;
 
                     if (currentLength > maxLength) {
                         maxLength = currentLength;
