@@ -8,7 +8,7 @@ import java.util.*;
  * Time complexity: O(n^2)
  * Space complexity: O(n)
  */
-public class TreeSum {
+public class ThreeSum {
 
     public List<List<Integer>> threeSumViaTwoPointers(int[] nums) {
         Set<List<Integer>> result = new HashSet<>();
