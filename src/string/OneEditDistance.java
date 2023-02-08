@@ -25,12 +25,8 @@ public class OneEditDistance {
                 if (hasEdit) return false;
                 hasEdit = true;
 
-                if (first.length() == second.length()) {
-                    i++;
-                    j++;
-                } else {
-                    j++;
-                }
+                if (first.length() == second.length()) i++;
+                j++;
             }
         }
 
