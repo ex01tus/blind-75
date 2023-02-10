@@ -6,7 +6,7 @@ import java.util.LinkedList;
 /**
  * Description: https://leetcode.com/problems/implement-queue-using-stacks
  * Difficulty: Easy
- * Time complexity: O(1) for push, O(n) for pop and peek
+ * Time complexity: O(1) for push(), O(n) for pop() and peek()
  * Space complexity: O(n)
  */
 public class ImplementQueueUsingStacks {
