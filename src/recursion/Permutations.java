@@ -13,24 +13,29 @@ public class Permutations {
 
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
-        backtrack(nums, new ArrayList<>(), result);
+        backtrack(nums, new int[nums.length], new ArrayList<>(), result);
 
         return result;
     }
 
-    private void backtrack(int[] nums, List<Integer> permutation, List<List<Integer>> result) {
-        if (permutation.size() == nums.length) {
-            result.add(permutation);
+    private void backtrack(
+            int[] nums,
+            int[] used,
+            List<Integer> currentPermutation,
+            List<List<Integer>> result) {
+        if (currentPermutation.size() == nums.length) {
+            result.add(new ArrayList<>(currentPermutation));
             return;
         }
 
-        for (int num : nums) {
-            if (permutation.contains(num)) continue;
+        for (int i = 0; i < nums.length; i++) {
+            if (used[i] == 1) continue;
 
-            List<Integer> newPermutation = new ArrayList<>(permutation);
-            newPermutation.add(num);
-
-            backtrack(nums, newPermutation, result);
+            currentPermutation.add(nums[i]);
+            used[i] = 1;
+            backtrack(nums, used, currentPermutation, result);
+            used[i] = 0;
+            currentPermutation.remove(currentPermutation.size() - 1);
         }
     }
 }

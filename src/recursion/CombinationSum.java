@@ -21,23 +21,20 @@ public class CombinationSum {
     private void backtrack(
             int[] candidates,
             int remains,
-            List<Integer> permutation,
+            List<Integer> currentPermutation,
             int start,
             List<List<Integer>> result) {
-        if (remains == 0) {
-            result.add(permutation);
-            return;
-        }
+        if (remains < 0) return;
 
-        if (remains < 0) {
+        if (remains == 0) {
+            result.add(new ArrayList<>(currentPermutation));
             return;
         }
 
         for (int i = start; i < candidates.length; i++) {
-            List<Integer> newPermutation = new ArrayList<>(permutation);
-            newPermutation.add(candidates[i]);
-
-            backtrack(candidates, remains - candidates[i], newPermutation, i, result);
+            currentPermutation.add(candidates[i]);
+            backtrack(candidates, remains - candidates[i], currentPermutation, i, result);
+            currentPermutation.remove(currentPermutation.size() - 1);
         }
     }
 }
