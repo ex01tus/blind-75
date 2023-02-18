@@ -48,7 +48,7 @@ public class CourseSchedule2 {
         stack.push(start);
 
         while (!stack.isEmpty()) {
-            int current = stack.poll();
+            int current = stack.pop();
 
             if (visited[current] == 0) {
                 visited[current] = 1;

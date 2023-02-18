@@ -22,7 +22,7 @@ public class BinaryTreePostorderTraversal {
 
         stack.push(root);
         while (!stack.isEmpty()) {
-            TreeNode current = stack.poll();
+            TreeNode current = stack.pop();
             out.push(current);
 
             if (current.left != null) stack.push(current.left);

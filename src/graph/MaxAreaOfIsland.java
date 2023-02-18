@@ -37,7 +37,7 @@ public class MaxAreaOfIsland {
 
         int count = 0;
         while (!stack.isEmpty()) {
-            int[] current = stack.poll();
+            int[] current = stack.pop();
 
             if (visited[current[0]][current[1]] == 0) {
                 visited[current[0]][current[1]] = 1;

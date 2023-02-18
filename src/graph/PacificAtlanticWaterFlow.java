@@ -49,7 +49,7 @@ public class PacificAtlanticWaterFlow {
         stack.push(start);
 
         while (!stack.isEmpty()) {
-            int[] current = stack.poll();
+            int[] current = stack.pop();
 
             if (visited[current[0]][current[1]] == 0) {
                 stack.push(current);
@@ -100,7 +100,7 @@ public class PacificAtlanticWaterFlow {
         stack.push(start);
 
         while (!stack.isEmpty()) {
-            int[] current = stack.poll();
+            int[] current = stack.pop();
 
             if (visited[current[0]][current[1]] == 0) {
                 visited[current[0]][current[1]] = 1;

@@ -42,7 +42,7 @@ public class WordSearch {
                 return true;
             }
 
-            int[] current = stack.poll();
+            int[] current = stack.pop();
 
             if (visited[current[0]][current[1]] == 0) {
                 if (board[current[0]][current[1]] != word.charAt(pointer)) {

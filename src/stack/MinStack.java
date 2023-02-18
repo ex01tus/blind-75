@@ -40,10 +40,10 @@ class MinStack {
             Node next;
             int min;
 
-            public Node(int v, Node n, int m) {
-                val = v;
-                next = n;
-                min = m;
+            public Node(int val, Node node, int min) {
+                this.val = val;
+                this.next = node;
+                this.min = min;
             }
         }
     }
