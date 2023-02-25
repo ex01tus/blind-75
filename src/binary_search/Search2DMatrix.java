@@ -3,12 +3,14 @@ package binary_search;
 /**
  * Description: https://leetcode.com/problems/search-a-2d-matrix
  * Difficulty: Medium
- * Time complexity: O(log n + log m)
- * Space complexity: O(1)
  */
 public class Search2DMatrix {
 
-    public boolean searchMatrix(int[][] matrix, int target) {
+    /**
+     * Time complexity: O(log n + log m)
+     * Space complexity: O(1)
+     */
+    public boolean searchMatrixViaBinarySearch(int[][] matrix, int target) {
         int row = findRowNumber(matrix, target);
         return containsTarget(matrix[row], target);
     }
@@ -43,6 +45,27 @@ public class Search2DMatrix {
                 left = mid + 1;
             } else if (target < row[mid]) {
                 right = mid - 1;
+            } else {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    /**
+     * Time complexity: O(n + m)
+     * Space complexity: O(1)
+     */
+    public boolean searchMatrixFromTopRightCorner(int[][] matrix, int target) {
+        int row = 0;
+        int col = matrix[0].length - 1;
+
+        while (row < matrix.length && col >= 0) {
+            if (target > matrix[row][col]) {
+                row++;
+            } else if (target < matrix[row][col]) {
+                col--;
             } else {
                 return true;
             }

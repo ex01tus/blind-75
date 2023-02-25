@@ -9,34 +9,24 @@ package linked_list;
 public class MergeTwoSortedLists {
 
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        ListNode head = new ListNode();
-        ListNode current = head;
+        ListNode dummy = new ListNode();
+        ListNode current = dummy;
 
         while (list1 != null && list2 != null) {
             if (list1.val >= list2.val) {
                 current.next = list2;
-                current = list2;
                 list2 = list2.next;
             } else {
                 current.next = list1;
-                current = list1;
                 list1 = list1.next;
             }
+
+            current = current.next;
         }
 
-        while (list1 != null) {
-            current.next = list1;
-            current = list1;
-            list1 = list1.next;
-        }
+        current.next = list1 != null ? list1 : list2;
 
-        while (list2 != null) {
-            current.next = list2;
-            current = list2;
-            list2 = list2.next;
-        }
-
-        return head.next;
+        return dummy.next;
     }
 
     private static class ListNode {

@@ -11,7 +11,7 @@ public class KthLargestElementInArray {
 
     /**
      * Time complexity: O(n)
-     * Space complexity: O(n)
+     * Space complexity: O(log n)
      */
     public int findKthLargestViaQuickSelect(int[] nums, int k) {
         return quickSelect(nums, 0, nums.length - 1, k);
@@ -34,7 +34,7 @@ public class KthLargestElementInArray {
         int pivotPointer = left;
 
         for (int i = left; i < right; i++) {
-            if (nums[i] > pivot) {
+            if (nums[i] > pivot) { // descending order
                 swap(nums, i, pivotPointer);
                 pivotPointer++;
             }
