@@ -28,7 +28,7 @@ public class SetMatrixZeroes {
         if (isFirstRowZeroed) setZeroesInFirstRow(matrix);
     }
 
-    private static boolean isFirstColZeroed(int[][] matrix) {
+    private boolean isFirstColZeroed(int[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             if (matrix[i][0] == 0) {
                 return true;
@@ -38,7 +38,7 @@ public class SetMatrixZeroes {
         return false;
     }
 
-    private static boolean isFirstRowZeroed(int[][] matrix) {
+    private boolean isFirstRowZeroed(int[][] matrix) {
         for (int j = 0; j < matrix[0].length; j++) {
             if (matrix[0][j] == 0) {
                 return true;
@@ -48,7 +48,7 @@ public class SetMatrixZeroes {
         return false;
     }
 
-    private static void markZeroedRowsAndCols(int[][] matrix) {
+    private void markZeroedRowsAndCols(int[][] matrix) {
         for (int i = 1; i < matrix.length; i++) {
             for (int j = 1; j < matrix[0].length; j++) {
                 if (matrix[i][j] == 0) {
@@ -59,7 +59,7 @@ public class SetMatrixZeroes {
         }
     }
 
-    private static void setZeroesInInnerMatrix(int[][] matrix) {
+    private void setZeroesInInnerMatrix(int[][] matrix) {
         for (int i = 1; i < matrix.length; i++) {
             for (int j = 1; j < matrix[0].length; j++) {
                 if (matrix[i][0] == 0 || matrix[0][j] == 0) {
@@ -69,14 +69,14 @@ public class SetMatrixZeroes {
         }
     }
 
-    private static void setZeroesInFirstCol(int[][] matrix) {
+    private void setZeroesInFirstCol(int[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             matrix[i][0] = 0;
         }
     }
 
 
-    private static void setZeroesInFirstRow(int[][] matrix) {
+    private void setZeroesInFirstRow(int[][] matrix) {
         for (int j = 0; j < matrix[0].length; j++) {
             matrix[0][j] = 0;
         }

@@ -80,7 +80,7 @@ public class SlidingWindowMaximum {
     }
 
     /**
-     * Time complexity: O(n * k)
+     * Time complexity: O(n * (k + log k))
      * Space complexity: O(k)
      */
     public int[] maxSlidingWindowViaMaxHeap(int[] nums, int k) {

@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * Description: https://leetcode.com/problems/rotate-image
  * Difficulty: Medium
- * Time complexity: O(m * n)
+ * Time complexity: O(n * n)
  * Space complexity: O(1)
  */
 public class RotateImage {
@@ -22,7 +22,7 @@ public class RotateImage {
 
     private void transpose(int[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
-            for (int j = 0; j < i; j++) {
+            for (int j = i + 1; j < matrix[0].length; j++){
                 int tmp = matrix[i][j];
                 matrix[i][j] = matrix[j][i];
                 matrix[j][i] = tmp;

@@ -29,7 +29,7 @@ public class MergeKSortedLists {
         return dummy.next;
     }
 
-    private static Queue<ListNode> buildMinHeapOfRoots(ListNode[] lists) {
+    private Queue<ListNode> buildMinHeapOfRoots(ListNode[] lists) {
         Queue<ListNode> minHeap = new PriorityQueue<>((n1, n2) -> Integer.compare(n1.val, n2.val));
         for (ListNode root : lists) {
             if (root != null) {
