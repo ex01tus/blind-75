@@ -4,7 +4,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * Description:https://leetcode.com/problems/binary-search-tree-iterator
+ * Description: https://leetcode.com/problems/binary-search-tree-iterator
  * Difficulty: Medium
  * Time complexity: O(1) on average for next(), O(1) for hasNext()
  * Space complexity: O(h)

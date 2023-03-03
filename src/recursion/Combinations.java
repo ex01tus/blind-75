@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Description:https://leetcode.com/problems/combinations
+ * Description: https://leetcode.com/problems/combinations
  * Difficulty: Medium
  * Time complexity: O(2^n)
  * Space complexity: O(k)

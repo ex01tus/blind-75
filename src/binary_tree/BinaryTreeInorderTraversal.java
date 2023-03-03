@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Description:https://leetcode.com/problems/binary-tree-inorder-traversal
+ * Description: https://leetcode.com/problems/binary-tree-inorder-traversal
  * Difficulty: Easy
  * Time complexity: O(n)
  * Space complexity: O(h)

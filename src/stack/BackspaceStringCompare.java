@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Objects;
 
 /**
- * Description:https://leetcode.com/problems/backspace-string-compare
+ * Description: https://leetcode.com/problems/backspace-string-compare
  * Difficulty: Easy
  */
 public class BackspaceStringCompare {
