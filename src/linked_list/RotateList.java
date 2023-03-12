@@ -10,7 +10,7 @@ public class RotateList {
      * Time complexity: O(n)
      * Space complexity: O(1)
      */
-    public ListNode rotateRightOptimal(ListNode head, int rotations) {
+    public ListNode rotateRightOptimalApproach(ListNode head, int rotations) {
         if (head == null || head.next == null) return head;
 
         ListNode fast = head;
@@ -40,7 +40,7 @@ public class RotateList {
      * Time complexity: O(n + k)
      * Space complexity: O(1)
      */
-    public ListNode rotateRightNaive(ListNode head, int rotations) {
+    public ListNode rotateRightNaiveApproach(ListNode head, int rotations) {
         if (head == null || head.next == null) return head;
 
         ListNode slow = head;

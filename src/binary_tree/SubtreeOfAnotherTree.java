@@ -1,4 +1,4 @@
-package binary_search;
+package binary_tree;
 
 /**
  * Description: https://leetcode.com/problems/subtree-of-another-tree

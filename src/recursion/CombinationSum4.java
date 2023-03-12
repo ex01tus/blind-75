@@ -42,12 +42,11 @@ public class CombinationSum4 {
      */
     public int combinationSum4WithNegativeNumbers(int[] nums, int target, int maxLength) {
         Map<String, Integer> memo = new HashMap<>();
-        return count(nums, new int[nums.length], 0, maxLength, target, memo);
+        return count(nums, 0, maxLength, target, memo);
     }
 
     private int count(
             int[] nums,
-            int[] used,
             int currentLength,
             int maxLength,
             int remains,
@@ -64,9 +63,7 @@ public class CombinationSum4 {
 
         int count = 0;
         for (int i = 0; i < nums.length; i++) {
-            used[i] = 1;
-            count += count(nums, used, currentLength + 1, maxLength, remains - nums[i], memo);
-            used[i] = 0;
+            count += count(nums, currentLength + 1, maxLength, remains - nums[i], memo);
         }
         memo.put(lengthToRemainsKey, count);
 
