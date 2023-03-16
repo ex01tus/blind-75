@@ -4,32 +4,35 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Description: https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal
+ * Description: https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal
  * Difficulty: Medium
  * Time complexity: O(n)
  * Space complexity: O(n)
  */
-public class ConstructBinaryTreeFromPreorderAndInorderTraversal {
+public class ConstructBinaryTreeFromInorderAndPostorderTraversal {
 
     private Map<Integer, Integer> inorderValueToIndex;
-    private int preorderRootIndex;
+    private int postorderRootIndex;
 
-    public TreeNode buildTree(int[] preorder, int[] inorder) {
+    public TreeNode buildTree(int[] inorder, int[] postorder) {
         inorderValueToIndex = toMap(inorder);
-        preorderRootIndex = 0;
-        return toTree(preorder, 0, preorder.length - 1);
+        postorderRootIndex = postorder.length - 1;
+        return toTree(postorder, 0, inorder.length - 1);
     }
 
-    private TreeNode toTree(int[] preorder, int left, int right) {
+    private TreeNode toTree(
+            int[] postorder,
+            int left,
+            int right) {
         if (left > right) return null;
 
         TreeNode root = new TreeNode();
-        root.val = preorder[preorderRootIndex++];
+        root.val = postorder[postorderRootIndex--];
         int inorderRootIndex = inorderValueToIndex.get(root.val);
 
-        // left before right!
-        root.left = toTree(preorder, left, inorderRootIndex - 1);
-        root.right = toTree(preorder, inorderRootIndex + 1, right);
+        // right before left!
+        root.right = toTree(postorder, inorderRootIndex + 1, right);
+        root.left = toTree(postorder, left, inorderRootIndex - 1);
 
         return root;
     }

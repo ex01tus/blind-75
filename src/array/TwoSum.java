@@ -20,9 +20,9 @@ public class TwoSum {
             Integer pairIndex = seen.get(pair);
             if (pairIndex != null) {
                 return new int[]{i, pairIndex};
-            } else {
-                seen.put(nums[i], i);
             }
+
+            seen.put(nums[i], i);
         }
 
         throw new RuntimeException();

@@ -63,7 +63,7 @@ public class WordLadder {
     private List<String> generatePatterns(String word) {
         List<String> patterns = new ArrayList<>();
 
-        // takes O(w^2) time, since we are iterating though the word and using substring on each iteration
+        // takes O(w^2) time, since we are iterating through the word and using substring on each iteration
         // hot -> [*ot, h*t, ho*]
         for (int i = 0; i < word.length(); i++) {
             String pattern = word.substring(0, i) + "*" + word.substring(i + 1);

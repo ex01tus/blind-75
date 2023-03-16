@@ -6,16 +6,52 @@ import java.util.LinkedList;
 /**
  * Description: https://leetcode.com/problems/word-search
  * Difficulty: Medium
- * Time complexity: O(3^word.length())
+ * Time complexity: O(m * n * 3^word.length)
  * Space complexity: O(m * n)
  */
 public class WordSearch {
 
     private int[][] directions;
+    private int[][] visited;
+
+    public boolean existRecursive(char[][] board, String word) {
+        directions = new int[][]{{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+        visited = new int[board.length][board[0].length];
+
+        for (int i = 0; i < board.length; i++) {
+            for (int j = 0; j < board[0].length; j++) {
+                if (board[i][j] == word.charAt(0)) {
+                    boolean isExist = isExist(board, i, j, word, 0);
+                    if (isExist) return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    boolean isExist(char[][] board, int x, int y, String word, int index) {
+        if (index == word.length() - 1) return true;
+
+        visited[x][y] = 1;
+        for (int[] dir : directions) {
+            int x1 = x + dir[0];
+            int y1 = y + dir[1];
+
+            if (x1 >= 0 && x1 < board.length && y1 >= 0 && y1 < board[0].length
+                    && visited[x1][y1] == 0
+                    && word.charAt(index + 1) == board[x1][y1]) {
+                if (isExist(board, x1, y1, word, index + 1)) {
+                    return true;
+                }
+            }
+        }
+        visited[x][y] = 0;
+
+        return false;
+    }
 
     public boolean existIterative(char[][] board, String word) {
-        if (word.length() < 1) return false;
-
         directions = new int[][]{{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
 
         for (int i = 0; i < board.length; i++) {
@@ -68,48 +104,6 @@ public class WordSearch {
                 pointer--;
             }
         }
-
-        return false;
-    }
-
-    private int[][] visited;
-
-    public boolean existRecursive(char[][] board, String word) {
-        if (word.length() < 1) return false;
-
-        directions = new int[][]{{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
-        visited = new int[board.length][board[0].length];
-
-        for (int i = 0; i < board.length; i++) {
-            for (int j = 0; j < board[0].length; j++) {
-                if (board[i][j] == word.charAt(0)) {
-                    boolean isExist = isExist(board, i, j, word, 0);
-                    if (isExist) return true;
-                }
-            }
-        }
-
-        return false;
-    }
-
-    boolean isExist(char[][] board, int x, int y, String word, int index) {
-        if (index == word.length()) {
-            return true;
-        }
-
-        if (x < 0 || y < 0 || x >= board.length || y >= board[0].length
-                || visited[x][y] == 1
-                || word.charAt(index) != board[x][y]) {
-            return false;
-        }
-
-        visited[x][y] = 1;
-        for (int[] dir : directions) {
-            if (isExist(board, x + dir[0], y + dir[1], word, index + 1)) {
-                return true;
-            }
-        }
-        visited[x][y] = 0;
 
         return false;
     }

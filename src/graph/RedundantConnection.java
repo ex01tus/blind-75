@@ -17,7 +17,7 @@ public class RedundantConnection {
         }
 
         for (int[] edge : edges) {
-            if (!unionByRank(parents, ranks, edge[0], edge[1])) {
+            if (!uniteByRank(parents, ranks, edge[0], edge[1])) {
                 return edge;
             }
         }
@@ -25,7 +25,7 @@ public class RedundantConnection {
         throw new RuntimeException();
     }
 
-    private boolean unionByRank(int[] parents, int[] ranks, int node1, int node2) {
+    private boolean uniteByRank(int[] parents, int[] ranks, int node1, int node2) {
         int parent1 = findParent(parents, node1);
         int parent2 = findParent(parents, node2);
 
