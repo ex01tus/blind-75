@@ -3,8 +3,8 @@ package graph;
 /**
  * Description: https://leetcode.com/problems/flood-fill
  * Difficulty: Easy
- * Time complexity: O(n)
- * Space complexity: O(n)
+ * Time complexity: O(m * n)
+ * Space complexity: O(m * n)
  */
 public class FloodFill {
 

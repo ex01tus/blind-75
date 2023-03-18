@@ -1,4 +1,4 @@
-package binary;
+package math;
 
 /**
  * Description: https://leetcode.com/problems/reverse-integer

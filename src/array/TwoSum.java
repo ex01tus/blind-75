@@ -13,13 +13,12 @@ public class TwoSum {
 
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> seen = new HashMap<>();
-        seen.put(nums[0], 0);
 
-        for (int i = 1; i < nums.length; i++) {
-            int pair = target - nums[i];
-            Integer pairIndex = seen.get(pair);
-            if (pairIndex != null) {
-                return new int[]{i, pairIndex};
+        for (int i = 0; i < nums.length; i++) {
+            int possiblePair = target - nums[i];
+            Integer possiblePairIndex = seen.get(possiblePair);
+            if (possiblePairIndex != null) {
+                return new int[] {i, possiblePairIndex};
             }
 
             seen.put(nums[i], i);
