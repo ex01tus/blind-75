@@ -15,13 +15,10 @@ public class RansomNote {
         Map<Character, Integer> charMap = toCharMap(magazine);
 
         for (char c : ransomNote.toCharArray()) {
-            Integer count = charMap.get(c);
-
-            if (count == null || count == 0) {
-                return false;
-            } else {
-                charMap.put(c, --count);
-            }
+            int count = charMap.getOrDefault(c, 0);
+            if (count == 0) return false;
+            
+            charMap.merge(c, -1, Integer::sum);
         }
 
         return true;
@@ -31,12 +28,7 @@ public class RansomNote {
         Map<Character, Integer> map = new HashMap<>();
 
         for (char c : magazine.toCharArray()) {
-            Integer count = map.get(c);
-            if (count == null) {
-                map.put(c, 1);
-            } else {
-                map.put(c, ++count);
-            }
+            map.merge(c, 1, Integer::sum);
         }
 
         return map;

@@ -57,7 +57,9 @@ public class CourseSchedule2 {
                 List<Integer> children = adjList.getOrDefault(current, List.of());
                 for (int child : children) {
                     if (visited[child] == 1) return true;
-                    stack.push(child);
+                    if (visited[child] == 0) {
+                        stack.push(child);
+                    }
                 }
             } else if (visited[current] == 1) {
                 visited[current] = 2;

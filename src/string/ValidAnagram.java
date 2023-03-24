@@ -23,12 +23,7 @@ public class ValidAnagram {
     private Map<Character, Integer> toCharMap(String s) {
         Map<Character, Integer> map = new HashMap<>();
         for (char c : s.toCharArray()) {
-            Integer count = map.get(c);
-            if (count == null) {
-                map.put(c, 1);
-            } else {
-                map.put(c, ++count);
-            }
+            map.merge(c, 1, Integer::sum);
         }
 
         return map;

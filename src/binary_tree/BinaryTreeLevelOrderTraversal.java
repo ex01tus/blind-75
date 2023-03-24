@@ -1,7 +1,9 @@
 package binary_tree;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 /**
  * Description: https://leetcode.com/problems/binary-tree-level-order-traversal
@@ -11,7 +13,37 @@ import java.util.List;
  */
 public class BinaryTreeLevelOrderTraversal {
 
-    public List<List<Integer>> levelOrder(TreeNode root) {
+    public List<List<Integer>> levelOrderViaIteration(TreeNode root) {
+        if (root == null) return List.of();
+
+        List<List<Integer>> result = new ArrayList<>();
+
+        Queue<TreeNode> planned = new LinkedList<>();
+        planned.offer(root);
+
+        while (!planned.isEmpty()) {
+            List<Integer> level = new ArrayList<>();
+            result.add(level);
+
+            int levelSize = planned.size();
+            for (int i = 0; i < levelSize; i++) {
+                TreeNode current = planned.poll();
+                level.add(current.val);
+
+                if (current.left != null) {
+                    planned.offer(current.left);
+                }
+
+                if (current.right != null) {
+                    planned.offer(current.right);
+                }
+            }
+        }
+
+        return result;
+    }
+
+    public List<List<Integer>> levelOrderViaRecursion(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
         traverse(root, 0, result);
         return result;

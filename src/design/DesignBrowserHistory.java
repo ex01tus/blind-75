@@ -1,4 +1,4 @@
-package linked_list;
+package design;
 
 import java.util.ArrayList;
 import java.util.Deque;

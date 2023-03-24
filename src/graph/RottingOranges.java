@@ -15,8 +15,8 @@ public class RottingOranges {
         Queue<int[]> planned = new LinkedList<>();
         int[][] directions = new int[][]{{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
         int[][] visited = new int[grid.length][grid[0].length];
-
         int fresh = 0;
+
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[0].length; j++) {
                 if (grid[i][j] == 1) {
@@ -27,6 +27,8 @@ public class RottingOranges {
                 }
             }
         }
+
+        if (fresh == 0) return 0; // no fresh oranges -> no rotting "needed"
 
         int time = 0;
         while (!planned.isEmpty() && fresh > 0) {
@@ -45,12 +47,13 @@ public class RottingOranges {
                             && grid[x][y] == 1) {
                         visited[x][y] = 1;
                         planned.offer(new int[]{x, y});
-                        fresh--;
+
+                        if (--fresh == 0) return time;
                     }
                 }
             }
         }
 
-        return fresh == 0 ? time : -1;
+        return -1;
     }
 }

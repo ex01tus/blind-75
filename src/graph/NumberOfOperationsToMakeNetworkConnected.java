@@ -1,15 +1,15 @@
 package graph;
 
 /**
- * Description: https://leetcode.com/problems/graph-valid-tree
+ * Description: https://leetcode.com/problems/number-of-operations-to-make-network-connected
  * Difficulty: Medium
  * Time complexity: O(n)
  * Space complexity: O(n)
  */
-public class GraphValidTree {
+public class NumberOfOperationsToMakeNetworkConnected {
 
-    public boolean validTreeViaUnionFind(int n, int[][] edges) {
-        if (edges.length < n - 1) return false; // graph is not fully connected
+    public int makeConnectedViaUnionFind(int n, int[][] connections) {
+        if (connections.length < n - 1) return -1; // not enough cables
 
         int[] parents = new int[n];
         int[] ranks = new int[n];
@@ -18,20 +18,19 @@ public class GraphValidTree {
             ranks[i] = 1;
         }
 
-        for (int[] edge : edges) {
-            if (!unite(parents, ranks, edge[0], edge[1])) {
-                return false; // cycle was found
-            }
+        int components = n;
+        for (int[] connection : connections) {
+            components -= uniteAndCount(parents, ranks, connection[0], connection[1]);
         }
 
-        return true;
+        return components - 1;
     }
 
-    private boolean unite(int[] parents, int[] ranks, int node1, int node2) {
+    private int uniteAndCount(int[] parents, int[] ranks, int node1, int node2) {
         int parent1 = findParent(parents, node1);
         int parent2 = findParent(parents, node2);
 
-        if (parent1 == parent2) return false;
+        if (parent1 == parent2) return 0;
 
         if (ranks[parent1] > ranks[parent2]) {
             parents[parent2] = parent1;
@@ -41,7 +40,7 @@ public class GraphValidTree {
             ranks[parent2] += ranks[parent1];
         }
 
-        return true;
+        return 1;
     }
 
     private int findParent(int[] parents, int node) {

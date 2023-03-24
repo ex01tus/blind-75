@@ -12,18 +12,12 @@ import java.util.Map;
 public class LongestPalindrome {
 
     public int longestPalindrome(String s) {
-        Map<Character, Integer> charMap = new HashMap<>();
-
         int maxLength = 0;
+
+        Map<Character, Integer> charMap = new HashMap<>();
         for (char c : s.toCharArray()) {
-            Integer count = charMap.get(c);
-            if (count == null) {
-                charMap.put(c, 1);
-            } else {
-                count++;
-                if (count % 2 == 0) maxLength += 2;
-                charMap.put(c, count);
-            }
+            int count = charMap.merge(c, 1, Integer::sum);
+            if (count % 2 == 0) maxLength += 2;
         }
 
         if (maxLength < s.length()) {
