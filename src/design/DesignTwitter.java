@@ -70,15 +70,7 @@ public class DesignTwitter {
             return newsFeed;
         }
 
-        private static class Tweet {
-
-            private final int tweetId;
-            private final long timestamp; // tweetId can be used instead
-
-            public Tweet(int tweetId, long timestamp) {
-                this.tweetId = tweetId;
-                this.timestamp = timestamp;
-            }
+        private record Tweet(int tweetId, long timestamp) {
         }
     }
 }

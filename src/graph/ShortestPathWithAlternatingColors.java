@@ -69,14 +69,6 @@ public class ShortestPathWithAlternatingColors {
         return adjList;
     }
 
-    private static class Node {
-
-        private final int idx;
-        private final int edgeColor;
-
-        public Node(int idx, int edgeColor) {
-            this.idx = idx;
-            this.edgeColor = edgeColor;
-        }
+    private record Node(int idx, int edgeColor) {
     }
 }
