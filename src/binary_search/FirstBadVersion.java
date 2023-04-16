@@ -25,6 +25,7 @@ public class FirstBadVersion {
         return left;
     }
 
+    // API call
     private boolean isBadVersion(int n) {
         return true;
     }

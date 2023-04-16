@@ -16,10 +16,10 @@ public class WordLadder {
         wordList.add(beginWord);
         Map<String, List<String>> adjList = buildAdjList(wordList);
 
-        return findShortestDistance(beginWord, endWord, adjList);
+        return findShortestPath(beginWord, endWord, adjList);
     }
 
-    private int findShortestDistance(String start, String target, Map<String, List<String>> adjList) {
+    private int findShortestPath(String start, String target, Map<String, List<String>> adjList) {
         Set<String> visited = new HashSet<>();
         int distance = 1;
 
