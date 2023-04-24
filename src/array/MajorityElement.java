@@ -23,20 +23,20 @@ public class MajorityElement {
      */
     public int majorityElementViaMooreAlgo(int[] nums) {
         int count = 0;
-        int majorityElement = nums[0];
+        int candidate = nums[0];
 
         for (int num : nums) {
             if (count == 0) {
-                majorityElement = num;
-            }
-
-            if (majorityElement == num) {
+                candidate = num;
+                count++;
+            } else if (candidate == num) {
                 count++;
             } else {
                 count--;
             }
         }
 
-        return majorityElement;
+        // it is guaranteed that there's a majority element, so no need for second pass
+        return candidate;
     }
 }

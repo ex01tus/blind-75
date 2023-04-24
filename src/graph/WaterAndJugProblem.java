@@ -5,8 +5,8 @@ import java.util.*;
 /**
  * Description: https://leetcode.com/problems/water-and-jug-problem
  * Difficulty: Medium
- * Time complexity: O(xy)
- * Space complexity: O(xy)
+ * Time complexity: O(x * y)
+ * Space complexity: O(x * y)
  */
 public class WaterAndJugProblem {
 
