@@ -53,14 +53,7 @@ public class ReverseNodesInKGroup {
         return length;
     }
 
-    private static class ReversalResult {
-        ListNode head;
-        ListNode tail;
-
-        public ReversalResult(ListNode head, ListNode tail) {
-            this.head = head;
-            this.tail = tail;
-        }
+    private record ReversalResult(ListNode head, ListNode tail) {
     }
 
     private static class ListNode {

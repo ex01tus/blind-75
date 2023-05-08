@@ -24,9 +24,7 @@ public class MaximumSizeSubarraySumEqualsK {
                 maxLength = Math.max(maxLength, i - prefixSum.get(sum - k));
             }
 
-            if (!prefixSum.containsKey(sum)) {
-                prefixSum.put(sum, i);
-            }
+            prefixSum.putIfAbsent(sum, i);
         }
 
         return maxLength;
