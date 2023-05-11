@@ -1,3 +1,4 @@
-# Grind 75 Leetcode Problems
+# LeetCode Grind
 
-https://www.techinterviewhandbook.org/grind75
+![DSA Learning](https://img.shields.io/badge/DSA-Learning-blue?style=for-the-badge&logo=leetcode)
+
