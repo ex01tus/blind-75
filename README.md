@@ -1,6 +1,11 @@
 # LeetCode Grind
 
-![DSA Learning](https://img.shields.io/badge/DSA-Learning-blue?style=for-the-badge&logo=leetcode)
+<p style="text-align:left;">
+    <img src="https://img.shields.io/badge/DSA-Learning-blue?style=for-the-badge&logo=leetcode" alt="DSA Learning">
+    <span style="float:right;">
+        🚀 <a href="https://leetcode.com/ex01tus/">leetcode.com/ex01us</a>
+    </span>
+</p>
 
 This repository contains solutions for a couple hundred DSA problems from the [LeetCode](https://leetcode.com/)
 website.
