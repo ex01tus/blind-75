@@ -28,9 +28,11 @@ Problems are separated into 18 topics:
 | 17 | String              | [string](src/string)                           |
 | 18 | Trie                | [trie](src/trie)                               |
 
-### Good places to start your own LeetCode journey
+## Good places to start your own LeetCode journey
 
-- [NeetCode](https://neetcode.io/roadmap)
-- [Grind 75](https://www.techinterviewhandbook.org/grind75) 
+- [NeetCode](https://neetcode.io/) – organized roadmap, code solutions in 14 languages and video explanations
+- [Grind 75](https://www.techinterviewhandbook.org/grind75) – customizable study plan, algorithms cheetsheet and interview preparation guide
 
-> 🚀 [leetcode.com/ex01tus](https://leetcode.com/ex01tus)
+## My LeetCode account
+
+🚀 [leetcode.com/ex01tus](https://leetcode.com/ex01tus)
