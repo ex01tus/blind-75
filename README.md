@@ -33,6 +33,6 @@ Problems are separated into 18 topics:
 - [NeetCode](https://neetcode.io/) – organized roadmap, code solutions in 14 languages and video explanations
 - [Grind 75](https://www.techinterviewhandbook.org/grind75) – customizable study plan, algorithms cheetsheet and interview preparation guide
 
-## My LeetCode account
+## My LeetCode profile
 
 🚀 [leetcode.com/ex01tus](https://leetcode.com/ex01tus)
