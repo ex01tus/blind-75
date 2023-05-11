@@ -1,9 +1,5 @@
 # LeetCode Grind
 
-<span style="float:right;">
-    🚀 <a href="https://leetcode.com/ex01tus/">leetcode.com/ex01us</a>
-</span>
-
 ![DSA Learning](https://img.shields.io/badge/DSA-Learning-blue?style=for-the-badge&logo=leetcode)
 
 This repository contains solutions for a couple hundred DSA problems from the [LeetCode](https://leetcode.com/)
@@ -32,7 +28,9 @@ Problems are separated into 18 topics:
 | 17 | String              | [string](src/string)                           |
 | 18 | Trie                | [trie](src/trie)                               |
 
-### Good places to start your own LeetCode journey:
+### Good places to start your own LeetCode journey
 
 - [NeetCode](https://neetcode.io/roadmap)
 - [Grind 75](https://www.techinterviewhandbook.org/grind75) 
+
+> 🚀 [leetcode.com/ex01tus](https://leetcode.com/ex01tus)
