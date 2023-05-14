@@ -1,4 +1,4 @@
-package hash_table;
+package design;
 
 import java.util.*;
 
