@@ -1,4 +1,4 @@
-package linked_list;
+package design;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,10 +26,10 @@ public class LRUCache {
         public int get(int key) {
             if (!nodeMap.containsKey(key)) return -1;
 
-            Node node = nodeMap.get(key);
-            nodeList.moveToHead(node);
+            Node found = nodeMap.get(key);
+            nodeList.moveToHead(found);
 
-            return node.val;
+            return found.val;
         }
 
         public void put(int key, int value) {

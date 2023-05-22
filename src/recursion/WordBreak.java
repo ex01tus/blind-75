@@ -24,11 +24,8 @@ public class WordBreak {
             boolean canBeSegmented = s.startsWith(word)
                     && backtrack(s.substring(word.length()), wordDict, failedChecks);
 
-            if (canBeSegmented) {
-                return true;
-            } else {
-                failedChecks.add(s);
-            }
+            if (canBeSegmented) return true;
+            failedChecks.add(s);
         }
 
         failedChecks.add(s);
