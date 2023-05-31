@@ -8,17 +8,16 @@ package dynamic_programming;
  */
 public class CoinChange2 {
 
-    public int change(int amount, int[] coins) {
-        int[] dp = new int[amount + 1];
+    public int change(int totalAmount, int[] coins) {
+        int[] dp = new int[totalAmount + 1];
         dp[0] = 1;
 
         for (int coin : coins) {
-            for (int i = coin; i <= amount; i++) {
-                int prev = i - coin;
-                dp[i] += dp[prev];
+            for (int amount = coin; amount <= totalAmount; amount++) {
+                dp[amount] += dp[amount - coin];
             }
         }
 
-        return dp[amount];
+        return dp[totalAmount];
     }
 }

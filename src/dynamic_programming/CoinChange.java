@@ -1,7 +1,6 @@
 package dynamic_programming;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.Arrays;
 
 /**
  * Description: https://leetcode.com/problems/coin-change
@@ -11,28 +10,19 @@ import java.util.Map;
  */
 public class CoinChange {
 
-    public int coinChange(int[] coins, int amount) {
-        if (amount < 1) return 0;
+    public int coinChange(int[] coins, int totalAmount) {
+        int[] dp = new int[totalAmount + 1];
+        Arrays.fill(dp, Integer.MAX_VALUE);
+        dp[0] = 0;
 
-        Map<Integer, Integer> dp = new HashMap<>();
-        dp.put(0, 0);
-
-        for (int currentAmount = 1; currentAmount <= amount; currentAmount++) {
-            int count = Integer.MAX_VALUE;
-
+        for (int amount = 1; amount <= totalAmount; amount++) {
             for (int coin : coins) {
-                if (currentAmount - coin < 0) continue;
-
-                if (dp.get(currentAmount - coin) != null) {
-                    count = Math.min(dp.get(currentAmount - coin) + 1, count);
+                if (coin <= amount && dp[amount - coin] != Integer.MAX_VALUE) {
+                    dp[amount] = Math.min(dp[amount], dp[amount - coin] + 1);
                 }
-            }
-
-            if (count != Integer.MAX_VALUE) {
-                dp.put(currentAmount, count);
             }
         }
 
-        return dp.getOrDefault(amount, -1);
+        return dp[totalAmount] != Integer.MAX_VALUE ? dp[totalAmount] : -1;
     }
 }

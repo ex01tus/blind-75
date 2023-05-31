@@ -20,7 +20,7 @@ public class MaximumCandiesAllocatedToKChildren {
             int midAllocation = minAllocation + (maxAllocation - minAllocation) / 2;
 
             if (canAllocateCandyToEveryChild(candies, children, midAllocation)) {
-                max = Math.max(max, midAllocation);
+                max = minAllocation;
                 minAllocation = midAllocation + 1;
             } else {
                 maxAllocation = midAllocation - 1;

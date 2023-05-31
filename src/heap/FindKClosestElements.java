@@ -19,7 +19,7 @@ public class FindKClosestElements {
         while (left < right) {
             int mid = left + (right - left) / 2;
             // search for a start of a window [left; left + k) with a center closest to x
-            if (x > (arr[mid] + arr[mid + k]) / (double) 2) {
+            if (x > (arr[mid] + arr[mid + k]) / 2.0) {
                 left = mid + 1;
             } else {
                 right = mid;

@@ -3,14 +3,16 @@ package binary_search;
 /**
  * Description: https://leetcode.com/problems/median-of-two-sorted-arrays
  * Difficulty: Hard
- * Time complexity: O(log min(m, n))
- * Space complexity: O(1)
  */
 public class MedianOfTwoSortedArrays {
 
-    public double findMedianSortedArraysV1(int[] small, int[] large) {
+    /**
+     * Time complexity: O(log min(m, n))
+     * Space complexity: O(1)
+     */
+    public double findMedianSortedArraysViaBinarySearchV1(int[] small, int[] large) {
         if (small.length > large.length) {
-            return findMedianSortedArraysV1(large, small);
+            return findMedianSortedArraysViaBinarySearchV1(large, small);
         }
 
         int total = small.length + large.length;
@@ -43,9 +45,13 @@ public class MedianOfTwoSortedArrays {
         throw new RuntimeException();
     }
 
-    public double findMedianSortedArraysV2(int[] small, int[] large) {
+    /**
+     * Time complexity: O(log min(m, n))
+     * Space complexity: O(1)
+     */
+    public double findMedianSortedArraysViaBinarySearchV2(int[] small, int[] large) {
         if (small.length > large.length) {
-            return findMedianSortedArraysV2(large, small);
+            return findMedianSortedArraysViaBinarySearchV2(large, small);
         }
 
         int total = small.length + large.length;
@@ -71,5 +77,42 @@ public class MedianOfTwoSortedArrays {
         }
 
         throw new RuntimeException();
+    }
+
+    /**
+     * Time complexity: O(m + n)
+     * Space complexity: O(m + n)
+     */
+    public double findMedianSortedArraysViaMerge(int[] first, int[] second) {
+        int[] merged = merge(first, second);
+        int length = merged.length;
+        return length % 2 == 0
+                ? (merged[length / 2 - 1] + merged[length / 2]) / 2.0
+                : (double) merged[length / 2];
+    }
+
+    private int[] merge(int[] first, int[] second) {
+        int[] merged = new int[first.length + second.length];
+
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        while (i < first.length && j < second.length) {
+            if (first[i] <= second[j]) {
+                merged[k++] = first[i++];
+            } else {
+                merged[k++] = second[j++];
+            }
+        }
+
+        while (i < first.length) {
+            merged[k++] = first[i++];
+        }
+
+        while (j < second.length) {
+            merged[k++] = second[j++];
+        }
+
+        return merged;
     }
 }

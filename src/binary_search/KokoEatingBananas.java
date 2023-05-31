@@ -17,7 +17,7 @@ public class KokoEatingBananas {
             int midSpeed = minSpeed + (maxSpeed - minSpeed) / 2;
 
             if (canEatAllBananas(piles, hours, midSpeed)) {
-                min = Math.min(min, midSpeed);
+                min = midSpeed;
                 maxSpeed = midSpeed - 1;
             } else {
                 minSpeed = midSpeed + 1;
