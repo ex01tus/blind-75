@@ -12,7 +12,7 @@ public class CourseSchedule2 {
     private int[] visited;
     private Deque<Integer> topologicalPath;
 
-    public int[] findOrder(int numCourses, int[][] prerequisites) {
+    public int[] findOrderViaTopologicalSort(int numCourses, int[][] prerequisites) {
         visited = new int[numCourses];
         topologicalPath = new LinkedList<>();
         Map<Integer, List<Integer>> adjList = buildAdjList(prerequisites);
