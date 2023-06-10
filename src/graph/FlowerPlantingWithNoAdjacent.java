@@ -10,7 +10,7 @@ import java.util.*;
  */
 public class FlowerPlantingWithNoAdjacent {
 
-    public int[] gardenNoAdj(int n, int[][] paths) {
+    public int[] gardenNoAdjViaBFS(int n, int[][] paths) {
         Map<Integer, List<Integer>> adjList = buildAdjList(paths);
 
         int[] colors = new int[n];

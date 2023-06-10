@@ -42,8 +42,6 @@ public class MeetingRooms2 {
         return maxCount;
     }
 
-    private static class Interval {
-        int start;
-        int end;
+    private record Interval(int start, int end) {
     }
 }
