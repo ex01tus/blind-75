@@ -5,7 +5,7 @@
 This repository contains solutions for a couple hundred DSA problems from the [LeetCode](https://leetcode.com/)
 website.
 
-Problems are separated into 18 topics:
+Problems are separated into 19 topics:
 
 |    | Topic               | Package                                        |
 |---:|:--------------------|:-----------------------------------------------|
@@ -23,10 +23,11 @@ Problems are separated into 18 topics:
 | 12 | Linked List         | [linked_list](src/linked_list)                 |
 | 13 | Math                | [math](src/math)                               |
 | 14 | Matrix              | [matrix](src/matrix)                           |
-| 15 | Recursion           | [recursion](src/recursion)                     |
-| 16 | Stack               | [stack](src/stack)                             |
-| 17 | String              | [string](src/string)                           |
-| 18 | Trie                | [trie](src/trie)                               |
+| 15 | Quad Tree           | [quad_tree](src/quad_tree)                     |
+| 16 | Recursion           | [recursion](src/recursion)                     |
+| 17 | Stack               | [stack](src/stack)                             |
+| 18 | String              | [string](src/string)                           |
+| 19 | Trie                | [trie](src/trie)                               |
 
 ## Good places to start your own LeetCode journey
 
