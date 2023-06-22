@@ -44,7 +44,7 @@ public class MajorityElement2 {
         return checkCandidatesFrequency(nums, candidate1, candidate2);
     }
 
-    private static List<Integer> checkCandidatesFrequency(int[] nums, int candidate1, int candidate2) {
+    private List<Integer> checkCandidatesFrequency(int[] nums, int candidate1, int candidate2) {
         int count1 = 0;
         int count2 = 0;
 
