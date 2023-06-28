@@ -11,7 +11,10 @@ public class OneEditDistance {
     public boolean isOneEditDistance(String first, String second) {
         if (first.length() > second.length()) return isOneEditDistance(second, first);
 
-        if (second.length() - first.length() > 2) return false;
+        if (second.length() - first.length() > 1
+                || first.equals(second)) {
+            return false;
+        }
 
         boolean hasEdit = false;
         int i = 0;
