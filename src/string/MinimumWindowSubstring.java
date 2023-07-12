@@ -18,21 +18,15 @@ public class MinimumWindowSubstring {
         int charsToFind = charMap.size();
 
         int minWindow = Integer.MAX_VALUE;
-        int from = 0;
-        int to = 0;
+        int from = -1;
+        int to = -1;
 
         int left = 0;
-        int right = 0;
-
-        while (right < original.length()) {
+        for (int right = 0; right < original.length(); right++) {
             char rightChar = original.charAt(right);
             if (charMap.containsKey(rightChar)) {
-                int rightCharCount = charMap.get(rightChar);
-                if (rightCharCount == 1) {
-                    charsToFind--;
-                }
-
-                charMap.put(rightChar, rightCharCount - 1);
+                if (charMap.get(rightChar) == 1) charsToFind--;
+                charMap.merge(rightChar, -1, Integer::sum);
             }
 
             while (charsToFind == 0) {
@@ -45,18 +39,12 @@ public class MinimumWindowSubstring {
 
                 char leftChar = original.charAt(left);
                 if (charMap.containsKey(leftChar)) {
-                    int leftCharCount = charMap.get(leftChar);
-                    if (leftCharCount == 0) {
-                        charsToFind++;
-                    }
-
-                    charMap.put(leftChar, leftCharCount + 1);
+                    if (charMap.get(leftChar) == 0) charsToFind++;
+                    charMap.merge(leftChar, 1, Integer::sum);
                 }
 
                 left++;
             }
-
-            right++;
         }
 
         return minWindow == Integer.MAX_VALUE
