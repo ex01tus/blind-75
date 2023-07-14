@@ -2,14 +2,14 @@
 
 ![DSA Learning](https://img.shields.io/badge/DSA-Learning-blue?style=for-the-badge&logo=leetcode)
 
-This repository contains solutions for 517 DSA problems from the [LeetCode](https://leetcode.com/)
+This repository contains solutions for 521 DSA problems from the [LeetCode](https://leetcode.com/)
 website.
 
 Problems are separated into 19 topics:
 
 |    | Topic               | Package                                        | Problems |
 |---:|:--------------------|:-----------------------------------------------|---------:|
-|  1 | Array               | [array](src/array)                             |       70 |
+|  1 | Array               | [array](src/array)                             |       73 |
 |  2 | Binary              | [binary](src/binary)                           |       13 |
 |  3 | Binary Search       | [binary_search](src/binary_search)             |       18 |
 |  4 | Binary Search Tree  | [binary_search_tree](src/binary_search_tree)   |       16 |
@@ -17,7 +17,7 @@ Problems are separated into 19 topics:
 |  6 | Design              | [design](src/design)                           |       18 |
 |  7 | Dynamic Programming | [dynamic_programming](src/dynamic_programming) |       45 |
 |  8 | Graph               | [graph](src/graph)                             |       65 |
-|  9 | Greedy Algorithms   | [greedy](src/greedy)                           |       20 |
+|  9 | Greedy Algorithms   | [greedy](src/greedy)                           |       21 |
 | 10 | Heap                | [heap](src/heap)                               |       18 |
 | 11 | Interval            | [interval](src/interval)                       |       11 |
 | 12 | Linked List         | [linked_list](src/linked_list)                 |       31 |
