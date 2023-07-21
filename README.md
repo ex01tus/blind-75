@@ -2,7 +2,7 @@
 
 ![DSA Learning](https://img.shields.io/badge/DSA-Learning-blue?style=for-the-badge&logo=leetcode)
 
-This repository contains solutions for 526 DSA problems from the [LeetCode](https://leetcode.com/)
+This repository contains solutions for 530 DSA problems from the [LeetCode](https://leetcode.com/)
 website.
 
 Problems are separated into 19 topics:
@@ -20,13 +20,13 @@ Problems are separated into 19 topics:
 |  9 | Greedy Algorithms   | [greedy](src/greedy)                           |       21 |
 | 10 | Heap                | [heap](src/heap)                               |       19 |
 | 11 | Interval            | [interval](src/interval)                       |       11 |
-| 12 | Linked List         | [linked_list](src/linked_list)                 |       31 |
-| 13 | Math                | [math](src/math)                               |       19 |
+| 12 | Linked List         | [linked_list](src/linked_list)                 |       32 |
+| 13 | Math                | [math](src/math)                               |       20 |
 | 14 | Matrix              | [matrix](src/matrix)                           |       18 |
 | 15 | Quad Tree           | [quad_tree](src/quad_tree)                     |        1 |
 | 16 | Recursion           | [recursion](src/recursion)                     |       24 |
 | 17 | Stack               | [stack](src/stack)                             |       25 |
-| 18 | String              | [string](src/string)                           |       54 |
+| 18 | String              | [string](src/string)                           |       56 |
 | 19 | Trie                | [trie](src/trie)                               |        4 |
 
 ## Good places to start your own LeetCode journey
