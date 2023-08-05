@@ -27,6 +27,7 @@ public class LeastNumberOfUniqueIntegersAfterKRemovals {
         for (Map.Entry<Integer, Integer> e : freqMap.entrySet()) {
             minHeap.offer(e);
         }
+
         return minHeap;
     }
 

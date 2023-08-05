@@ -2,7 +2,7 @@
 
 ![DSA Learning](https://img.shields.io/badge/DSA-Learning-blue?style=for-the-badge&logo=leetcode)
 
-This repository contains solutions for 534 DSA problems from the [LeetCode](https://leetcode.com/)
+This repository contains solutions for 537 DSA problems from the [LeetCode](https://leetcode.com/)
 website.
 
 Problems are separated into 19 topics:
@@ -13,14 +13,14 @@ Problems are separated into 19 topics:
 |  2 | Binary              | [binary](src/binary)                           |       13 |
 |  3 | Binary Search       | [binary_search](src/binary_search)             |       18 |
 |  4 | Binary Search Tree  | [binary_search_tree](src/binary_search_tree)   |       16 |
-|  5 | Binary Tree         | [binary_tree](src/binary_tree)                 |       46 |
+|  5 | Binary Tree         | [binary_tree](src/binary_tree)                 |       47 |
 |  6 | Design              | [design](src/design)                           |       18 |
 |  7 | Dynamic Programming | [dynamic_programming](src/dynamic_programming) |       48 |
-|  8 | Graph               | [graph](src/graph)                             |       65 |
+|  8 | Graph               | [graph](src/graph)                             |       66 |
 |  9 | Greedy Algorithms   | [greedy](src/greedy)                           |       21 |
 | 10 | Heap                | [heap](src/heap)                               |       21 |
 | 11 | Interval            | [interval](src/interval)                       |       11 |
-| 12 | Linked List         | [linked_list](src/linked_list)                 |       32 |
+| 12 | Linked List         | [linked_list](src/linked_list)                 |       33 |
 | 13 | Math                | [math](src/math)                               |       20 |
 | 14 | Matrix              | [matrix](src/matrix)                           |       18 |
 | 15 | Quad Tree           | [quad_tree](src/quad_tree)                     |        1 |
