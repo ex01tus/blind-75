@@ -4,7 +4,7 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
- * Description: https://leetcode.com/problems/plus-one-linked-list
+ * Description: https://leetcode.com/problems/plus-one-lignked-list
  * Difficulty: Medium
  */
 public class PlusOneLinkedList {
@@ -42,7 +42,7 @@ public class PlusOneLinkedList {
 
         Deque<ListNode> stack = buildStack(dummy);
 
-        int carry = 0;
+        int carry = 1;
         while (!stack.isEmpty()) {
             ListNode current = stack.pop();
             int sum = current.val + carry;
@@ -59,7 +59,6 @@ public class PlusOneLinkedList {
         ListNode current = dummy;
         while (current != null) {
             stack.push(current);
-            if (current.next == null) current.val += 1;
             current = current.next;
         }
 

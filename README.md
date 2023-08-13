@@ -2,14 +2,14 @@
 
 ![DSA Learning](https://img.shields.io/badge/DSA-Learning-blue?style=for-the-badge&logo=leetcode)
 
-This repository contains solutions for 541 DSA problems from the [LeetCode](https://leetcode.com/)
+This repository contains solutions for 544 DSA problems from the [LeetCode](https://leetcode.com/)
 website.
 
 Problems are separated into 19 topics:
 
 |    | Topic               | Package                                        | Problems |
 |---:|:--------------------|:-----------------------------------------------|---------:|
-|  1 | Array               | [array](src/array)                             |       76 |
+|  1 | Array               | [array](src/array)                             |       79 |
 |  2 | Binary              | [binary](src/binary)                           |       13 |
 |  3 | Binary Search       | [binary_search](src/binary_search)             |       19 |
 |  4 | Binary Search Tree  | [binary_search_tree](src/binary_search_tree)   |       16 |
