@@ -2,14 +2,14 @@
 
 ![DSA Learning](https://img.shields.io/badge/DSA-Learning-blue?style=for-the-badge&logo=leetcode)
 
-This repository contains solutions for 573 DSA problems from the [LeetCode](https://leetcode.com/)
+This repository contains solutions for 577 DSA problems from the [LeetCode](https://leetcode.com/)
 website.
 
 Problems are separated into 20 topics:
 
 |    | Topic               | Package                                        | Problems |
 |---:|:--------------------|:-----------------------------------------------|---------:|
-|  1 | Array               | [array](src/array)                             |       80 |
+|  1 | Array               | [array](src/array)                             |       81 |
 |  2 | Binary              | [binary](src/binary)                           |       13 |
 |  3 | Binary Search       | [binary_search](src/binary_search)             |       19 |
 |  4 | Binary Search Tree  | [binary_search_tree](src/binary_search_tree)   |       16 |
@@ -22,12 +22,12 @@ Problems are separated into 20 topics:
 | 11 | Interval            | [interval](src/interval)                       |       11 |
 | 12 | Linked List         | [linked_list](src/linked_list)                 |       34 |
 | 13 | Math                | [math](src/math)                               |       21 |
-| 14 | Matrix              | [matrix](src/matrix)                           |       18 |
+| 14 | Matrix              | [matrix](src/matrix)                           |       19 |
 | 15 | Quad Tree           | [quad_tree](src/quad_tree)                     |        1 |
 | 16 | Recursion           | [recursion](src/recursion)                     |       24 |
 | 17 | SQL                 | [sql](src/sql)                                 |       28 |
 | 18 | Stack               | [stack](src/stack)                             |       25 |
-| 19 | String              | [string](src/string)                           |       56 |
+| 19 | String              | [string](src/string)                           |       58 |
 | 20 | Trie                | [trie](src/trie)                               |        4 |
 
 ## Good places to start your own LeetCode journey
