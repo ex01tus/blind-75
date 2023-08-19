@@ -2,7 +2,7 @@
 
 ![DSA Learning](https://img.shields.io/badge/DSA-Learning-blue?style=for-the-badge&logo=leetcode)
 
-This repository contains solutions for 577 DSA problems from the [LeetCode](https://leetcode.com/)
+This repository contains solutions for 582 DSA problems from the [LeetCode](https://leetcode.com/)
 website.
 
 Problems are separated into 20 topics:
@@ -18,16 +18,16 @@ Problems are separated into 20 topics:
 |  7 | Dynamic Programming | [dynamic_programming](src/dynamic_programming) |       49 |
 |  8 | Graph               | [graph](src/graph)                             |       66 |
 |  9 | Greedy Algorithms   | [greedy](src/greedy)                           |       21 |
-| 10 | Heap                | [heap](src/heap)                               |       21 |
-| 11 | Interval            | [interval](src/interval)                       |       11 |
+| 10 | Heap                | [heap](src/heap)                               |       22 |
+| 11 | Interval            | [interval](src/interval)                       |       12 |
 | 12 | Linked List         | [linked_list](src/linked_list)                 |       34 |
-| 13 | Math                | [math](src/math)                               |       21 |
+| 13 | Math                | [math](src/math)                               |       22 |
 | 14 | Matrix              | [matrix](src/matrix)                           |       19 |
 | 15 | Quad Tree           | [quad_tree](src/quad_tree)                     |        1 |
 | 16 | Recursion           | [recursion](src/recursion)                     |       24 |
 | 17 | SQL                 | [sql](src/sql)                                 |       28 |
 | 18 | Stack               | [stack](src/stack)                             |       25 |
-| 19 | String              | [string](src/string)                           |       58 |
+| 19 | String              | [string](src/string)                           |       60 |
 | 20 | Trie                | [trie](src/trie)                               |        4 |
 
 ## Good places to start your own LeetCode journey
