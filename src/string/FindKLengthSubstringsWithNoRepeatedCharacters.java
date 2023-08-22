@@ -13,11 +13,15 @@ import java.util.Set;
  */
 public class FindKLengthSubstringsWithNoRepeatedCharacters {
 
-    public int numKLenSubstrNoRepeatsViaSet(String s, int k) {
-        Set<Character> seen = new HashSet<>();
+    private static final int ALPHABET_SIZE = 26;
 
+    public int numKLenSubstrNoRepeatsViaSet(String s, int k) {
+        if (k > ALPHABET_SIZE) return 0;
+
+        Set<Character> seen = new HashSet<>();
         int substrings = 0;
         int left = 0;
+
         for (int right = 0; right < s.length(); right++) {
             while (seen.contains(s.charAt(right))) {
                 seen.remove(s.charAt(left));
@@ -37,10 +41,12 @@ public class FindKLengthSubstringsWithNoRepeatedCharacters {
     }
 
     public int numKLenSubstrNoRepeatsViaFreqMap(String s, int k) {
-        Map<Character, Integer> freqMap = new HashMap<>();
+        if (k > ALPHABET_SIZE) return 0;
 
+        Map<Character, Integer> freqMap = new HashMap<>();
         int substrings = 0;
         int left = 0;
+
         for (int right = 0; right < s.length(); right++) {
             freqMap.merge(s.charAt(right), 1, Integer::sum);
             while (freqMap.get(s.charAt(right)) > 1) {
