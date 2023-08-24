@@ -2,7 +2,7 @@
 
 ![DSA Learning](https://img.shields.io/badge/DSA-Learning-blue?style=for-the-badge&logo=leetcode)
 
-This repository contains solutions for 588 DSA problems from the [LeetCode](https://leetcode.com/)
+This repository contains solutions for 590 DSA problems from the [LeetCode](https://leetcode.com/)
 website.
 
 Problems are separated into 20 topics:
@@ -22,12 +22,12 @@ Problems are separated into 20 topics:
 | 11 | Interval            | [interval](src/interval)                       |       12 |
 | 12 | Linked List         | [linked_list](src/linked_list)                 |       34 |
 | 13 | Math                | [math](src/math)                               |       23 |
-| 14 | Matrix              | [matrix](src/matrix)                           |       19 |
+| 14 | Matrix              | [matrix](src/matrix)                           |       20 |
 | 15 | Quad Tree           | [quad_tree](src/quad_tree)                     |        1 |
 | 16 | Recursion           | [recursion](src/recursion)                     |       24 |
 | 17 | SQL                 | [sql](src/sql)                                 |       28 |
 | 18 | Stack               | [stack](src/stack)                             |       25 |
-| 19 | String              | [string](src/string)                           |       61 |
+| 19 | String              | [string](src/string)                           |       62 |
 | 20 | Trie                | [trie](src/trie)                               |        4 |
 
 ## Good places to start your own LeetCode journey
