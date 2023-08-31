@@ -3,7 +3,7 @@ package array;
 /**
  * Description: https://leetcode.com/problems/rearrange-array-elements-by-sign
  * Difficulty: Medium
- * Time complexity: O(n(
+ * Time complexity: O(n)
  * Space complexity: O(n)
  */
 public class RearrangeArrayElementsBySign {
