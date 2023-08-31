@@ -11,7 +11,7 @@ import java.util.Map;
  * Time complexity: O(n)
  * Space complexity: O(n)
  */
-public class GroupPeopleGivenGroupSizeTheyBelongTo {
+public class GroupThePeopleGivenTheGroupSizeTheyBelongTo {
 
     public List<List<Integer>> groupThePeople(int[] groupSizes) {
         Map<Integer, List<Integer>> groupToPeople = new HashMap<>();

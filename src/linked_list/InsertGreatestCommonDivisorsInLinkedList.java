@@ -1,12 +1,12 @@
 package linked_list;
 
 /**
- * Description: https://www.baeldung.com/java-greatest-common-divisor
+ * Description: https://leetcode.com/problems/insert-greatest-common-divisors-in-linked-list
  * Difficulty: Medium
  * Time complexity: O(n * log v)
  * Space complexity: O(1)
  */
-public class FindGreatestCommonDivisorsInLinkedList {
+public class InsertGreatestCommonDivisorsInLinkedList {
 
     public ListNode insertGreatestCommonDivisors(ListNode head) {
         ListNode current = head;
